@@ -1,0 +1,60 @@
+ext {
+   // var = 'E:/MTA_Source/NewMTA-Android/MTA_Keys/MTA_Release20.jks'
+    var_cert = 'D:/MTA/NewMTA-Android/app/src/main/res/raw/deployment_cert.der'
+    var = 'D:/MTA/NewMTA-Android/MTA_Keys/MTA_Release3.keystore'
+    var1 = 'D:/MTA/NewMTA-Android/MTA_Keys/MTA_Release19.keystore'
+    var2 = 'D:/MTA/NewMTA-Android/MTA_Keys/MTA_Release20.jks'
+    var3 = 'D:/MTA/NewMTA-Android/MTA_Keys/MTA_Rlease_2023.jks'
+}// Top-level build file where you can add configuration options common to all sub-projects/modules.
+
+buildscript {
+
+    repositories {
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+
+        }
+        maven {
+
+            url 'https://pkgs.dev.azure.com/MicrosoftDeviceSDK/DuoSDK-Public/_packaging/Duo-SDK-Feed/maven/v1'
+            name 'Azure'
+        }
+        google()
+        mavenCentral()
+        maven { url 'https://jitpack.io' }
+    }
+    dependencies {
+
+       // classpath 'com.android.tools.build:gradle:+'
+        classpath 'com.android.tools.build:gradle:7.3.1'
+        classpath 'com.google.gms:google-services:4.3.10'
+        classpath 'com.google.firebase:firebase-crashlytics-gradle:2.5.2'
+
+        // classpath 'com.google.gms:google-services:4.2.0'
+        //classpath 'com.google.gms:google-services:4.3.3'
+        //classpath 'com.google.firebase:firebase-crashlytics-gradle:2.1.1'
+        // NOTE: Do not place your application dependencies here; they belong
+        // in the individual module build.gradle files
+    }
+    }
+
+allprojects {
+    repositories {
+        google()  // Google's Maven repository
+        jcenter()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        maven {
+
+            url 'https://pkgs.dev.azure.com/MicrosoftDeviceSDK/DuoSDK-Public/_packaging/Duo-SDK-Feed/maven/v1'
+            name 'Azure'
+        }
+    }
+
+
+
+}
